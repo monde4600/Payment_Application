@@ -1,0 +1,15 @@
+﻿  Application.c
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Application\Application.c(14,16): warning C4101: 'currentCard': unreferenced local variable
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Application\Application.c(33,20): warning C4101: 'term': unreferenced local variable
+  Card.c
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Card\Card.c(10,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Card\Card.c(37,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Card\Card.c(56,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Server.c
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Server\Server.c(9,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Server\Server.c(10,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Terminal.c
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Terminal\Terminal.c(13,18): error C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Terminal\Terminal.c(59,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Terminal\Terminal.c(88,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...

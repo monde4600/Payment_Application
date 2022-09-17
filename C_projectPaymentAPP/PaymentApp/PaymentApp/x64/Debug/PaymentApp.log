@@ -1,0 +1,6 @@
+﻿  Card.c
+  Server.c
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Server\Server.c(9,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\PaymentApp\Server\Server.c(10,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
+  PaymentApp.vcxproj -> E:\embided_deblom\FWD_PROFI\C_programming\PaymentApp\x64\Debug\PaymentApp.exe

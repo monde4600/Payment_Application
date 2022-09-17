@@ -1,0 +1,103 @@
+int main()
+{
+	//printf("4546");
+	ST_cardData_t currentCard = { "abanob adel helmy abd","9834135459514756657" ,"09/24" };
+
+	
+	/*
+	EN_cardError_t CardState = getCardHolderName(&currentCard);
+	if (OK == CardState)
+	{
+		uint8_t i=0;
+		while (currentCard.cardHolderName[++i]);
+		printf("%s\n%d\n", currentCard.cardHolderName, i);
+	}
+	else
+		printf("the must be bettween 20 and 24 charachter and mustn't content any numbers\n");
+	*/
+	
+	/*if (getCardExpiryDate(&currentCard) == OK)
+		printf("%s\n", currentCard.cardExpirationDate);
+	else
+		printf("wrong date !!");
+	*/
+	 
+	/*if (getCardPAN(&currentCard) == OK)
+		printf("%s\n", currentCard.primaryAccountNumber);
+	else
+		printf("wrong PAN must be between 16 and 19 digits !!\n");*/
+	ST_terminalData_t term = {2454.8,5000,"15/09/2022"};
+	//setMaxAmount(&term);
+	/*getTransactionDate(&term);
+	printf("Today is: %s\n", term.transactionDate);
+	if (isCardExpired(&currentCard, &term) == oK)
+		printf("the Card is On date\n");
+	else printf("this Card is Expired");
+	*/
+	/*if (INVALID_AMOUNT == getTransactionAmount(&term))	printf("Invaled Amount.\n");
+	else
+	{
+		printf("transaction amount = %f \n", term.transAmount);
+		if (isBelowMaxAmount(&term) == EXCEED_MAX_AMOUNT) printf("\nexceed the max amount\n");
+	}*/
+	//recieveTransactionData((void*)0);
+	//printf("asd");
+	
+	//printf("1654");
+	ST_accountsDB_t *database;
+	ST_transaction Ctrans;
+	Ctrans.cardHolderData = currentCard;
+	Ctrans.terminalData = term;
+	/*if (isValidAccount(&currentCard, &database) == APPROVED)
+		printf("balance: %f\nPA: %s\n", database->balance, database->primaryAccountNumber);
+	else
+		printf("not found");*/
+//	APPROVED, FRAUD_CARD, DECLINED_INSUFFECIENT_FUND, DECLINED_STOLEN_CARD, INTERNAL_SERVER_ERROR
+	switch (recieveTransactionData(&Ctrans))
+	{
+	case APPROVED :
+		printf("sucessful transaction .\n transaction numper is: %d",Ctrans.transactionSequenceNumber);
+		break;
+	case FRAUD_CARD:
+		printf("fake card.");
+		break;
+	case DECLINED_INSUFFECIENT_FUND:
+		printf("amount not avelable");
+		break;
+	case DECLINED_STOLEN_CARD:
+		printf("stolen card");
+		break;
+	case INTERNAL_SERVER_ERROR:
+		printf("server error");
+		break;
+	default:
+		break;
+	}
+	
+	/*if (isBlockedAccount(database) == ok)
+	{
+		printf("running");
+	}
+	else	printf("blocked");
+	*/
+	/*if (isAmountAvailable(&term, database) == ok)
+		printf("amount is avelabole");
+	else printf("amount is not avelabole");
+	*/
+	/*ST_transaction Ctrans;
+	Ctrans.cardHolderData = currentCard;
+	Ctrans.terminalData = term;*/
+	//Ctrans.transState = ok;
+	//TestCaseForFullTransDB();
+	//PrintAllTransDB();
+	
+	//saveTransaction(&Ctrans);
+	//printf("%d\n/////////////\n", Ctrans.transactionSequenceNumber);
+	//PrintAllTransDB();
+	//ST_transaction recivedtrans;
+
+	//getTransaction(Ctrans.transactionSequenceNumber,&recivedtrans);
+
+	//printf("name: %s\nsecNUM: %d", recivedtrans.cardHolderData.cardHolderName, recivedtrans.transactionSequenceNumber);
+	return 0;
+}
