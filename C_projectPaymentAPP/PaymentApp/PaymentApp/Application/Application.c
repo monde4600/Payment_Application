@@ -9,7 +9,7 @@
 
 void appStart(void)
 {
-	
+	//this for 
 	printf("\n///////////////payment APP////////////////////////\n");
 	ST_transaction APP_TransData;
 	while (getCardHolderName(&APP_TransData.cardHolderData) == WRONG_NAME)
